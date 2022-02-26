@@ -1,0 +1,38 @@
+# EmployeeSQL ERD
+
+Department
+-
+dept_noID PK VARCHAR
+dept_name VARCHAR
+
+
+Dept_emp
+-
+emp_no_id INT FK >- Employee.emp_noID
+dep_no_id VARCHAR FK >- Department.dept_noID
+
+
+Dept_manager
+-
+dept_no_id VARCHAR FK >- Department.dept_noID
+emp_no_id INT FK - Employee.emp_noID
+
+Employee
+-
+emp_noID PK INT
+emp_title_id FK VARCHAR FK - Title.titleID
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+sex VARCHAR
+hire_date DATE
+
+Salaries
+-
+emp_no_id INT FK - Employee.emp_noID
+salary INT
+
+Title
+-
+titleID PK VARCHAR
+title VARCHAR 
